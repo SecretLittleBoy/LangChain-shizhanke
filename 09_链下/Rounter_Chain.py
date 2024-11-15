@@ -3,7 +3,7 @@
 您可以点击最上方的“运行“按钮，直接运行该文件；更多操作指引请参考Readme.md文件。
 """
 import warnings
-
+import os
 warnings.filterwarnings("ignore")
 
 # 设置OpenAI API密钥
@@ -61,7 +61,7 @@ from langchain.chains.router.multi_prompt_prompt import (
     MULTI_PROMPT_ROUTER_TEMPLATE as RounterTemplate,
 )
 
-destinations = [f"{p['key']}: {p['description']}" for p in prompt_infos]
+destinations = [f"{info['key']}: {info['description']}" for info in prompt_infos]
 router_template = RounterTemplate.format(destinations="\n".join(destinations))
 print("路由模板:\n", router_template)
 

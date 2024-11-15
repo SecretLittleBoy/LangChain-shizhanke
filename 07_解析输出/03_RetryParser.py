@@ -2,11 +2,6 @@
 本文件是【输出解析：用OutputParser生成鲜花推荐列表】章节的配套代码，课程链接：https://juejin.cn/book/7387702347436130304/section/7388070987826364450
 您可以点击最上方的“运行“按钮，直接运行该文件；更多操作指引请参考Readme.md文件。
 """
-# 定义一个模板字符串，这个模板将用于生成提问
-template = """Based on the user question, provide an Action and Action Input for what step should be taken.
-{format_instructions}
-Question: {query}
-Response:"""
 
 # 定义一个Pydantic数据格式，这个格式描述了一个"行动"类及其属性
 from pydantic import BaseModel, Field

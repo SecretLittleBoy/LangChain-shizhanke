@@ -12,12 +12,8 @@ class Flower(BaseModel):
     name: str = Field(description="name of a flower")
     colors: List[str] = Field(description="the colors of this flower")
 
-
-# 定义一个用于获取某种花的颜色列表的查询
-flower_query = "Generate the charaters for a random flower."
-
 # 定义一个格式不正确的输出
-misformatted = "{'name': '康乃馨', 'colors': ['粉红色','白色','红色','紫色','黄色']}"
+misformatted = "{'name': '康乃馨', 'colors': [????'粉红色','白色','红色','紫色','黄色']}"
 
 # 创建一个用于解析输出的Pydantic解析器，此处希望解析为Flower格式
 parser = PydanticOutputParser(pydantic_object=Flower)

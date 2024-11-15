@@ -30,5 +30,7 @@ print("第二次对话后的记忆:", conversation.memory.buffer)
 
 # 回合3 （第二天的对话）
 conversation("我又来了，还记得我昨天为什么要来买花吗？")
-print("/n第三次对话后时提示:/n", conversation.prompt.template)
-print("/n第三次对话后的记忆:/n", conversation.memory.buffer)
+print("\n第三次对话后时提示:\n", conversation.prompt.template)
+print("\n第三次对话后的记忆:\n", conversation.memory.buffer)
+
+# conversation.memory.clear()

@@ -76,7 +76,7 @@ for flower, price in zip(flowers, prices):
     parsed_output_dict = parsed_output.dict()  # 将Pydantic格式转换为字典
 
     # 将解析后的输出添加到DataFrame中
-    df.loc[len(df)] = parsed_output.dict()
+    df.loc[len(df)] = parsed_output_dict
 
 # 打印字典
 print("输出的数据：", df.to_dict(orient="records"))
